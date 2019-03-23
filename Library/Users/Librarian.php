@@ -2,7 +2,12 @@
 
 namespace Library\Users;
 include 'Member.php';
-class Librarian extends Member {
+//include 'C:\xampp\htdocs\Exercise20\Library\Interfaces\Bookable.php';
+
+//use Library\Interfaces\Bookable;
+
+class Librarian extends Member //implements Bookable 
+{
     protected $emp_id;
     protected $position;
 
@@ -45,5 +50,9 @@ class Librarian extends Member {
 public function insertAll(&$array, $author, $title) {
         $array[$author] = $title;
     }
+    
+//public function write(Bookable $a) {
+//    echo $a->asBookable();
+//}
 
 }

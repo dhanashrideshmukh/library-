@@ -11,3 +11,13 @@ Traits:
 -trait updateDueDate - accessible for member and librarian 
 
 
+Wireframes:
+
+* Home page (link to login)(All) (I)
+* Log in page (link to search/view)(All) (L)
+* Forgot username/password page (D)
+* Search/view page (All) - go to admin button for L+LM (show message book not available) (I)
+* Book list page (M) (L)
+* Input page (L+LM)(D)
+<!--* Admin page (L+LM) (I)-->
+* Error page (any issues)(I)
