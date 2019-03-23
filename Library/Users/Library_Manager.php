@@ -11,6 +11,9 @@ public function DeleteData ($list,$item) {
     print_r($list);
 }
 
+public function view($list) {
+        print_r($list);
+    }
   
 }
 

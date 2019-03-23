@@ -3,6 +3,10 @@
 namespace Library\Users;
 
 include 'Guest.php';
+include 'Library/Traits/Traits.php';
+
+//use Library\Traits;
+
 
 class Member extends Guest {
 
@@ -43,13 +47,15 @@ class Member extends Guest {
         return false;
     }
 
-    public function Update_Due_Date($date, $days) {
-        if ($days > 7) {
-            return "You can only extend due date by 7 days";
-        } else {
-            $date = strtotime("+" . $days . " days", strtotime($date));
-            return "Thank-you for renewing your book loan, please note your new return date is now: " . date("Y-m-d", $date);
-        }
-    }
+    use \Library\Traits\dateable;
+//    public function Update_Due_Date($date, $days) {
+//        if ($days > 7) {
+//            return "You can only extend due date by 7 days";
+//        } else {
+//            $date = strtotime("+" . $days . " days", strtotime($date));
+//            return "Thank-you for renewing your book loan, please note your new return date is now: " . date("Y-m-d", $date);
+//        }
+//    }
+    
 
 }
