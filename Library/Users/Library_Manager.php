@@ -2,6 +2,11 @@
 
 namespace Library\Users;
 include 'Librarian.php';
+
+include 'C:\xampp\htdocs\Exercise20\Library\Interfaces\Bookable.php';
+
+use Library\Interfaces\Bookable;
+
 class Library_Manager extends Librarian {
 
 // First parameter is passed by reference as we want to make changes to the original array that is sent.
