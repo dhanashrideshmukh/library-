@@ -17,7 +17,7 @@ class Librarian extends Member {
         return "$this->first_name " . "$this->last_name" . " " . $this->position;
     }
 
-    public function viewAll($list) {
+    public function view($list) {
         return $list;
     }
 

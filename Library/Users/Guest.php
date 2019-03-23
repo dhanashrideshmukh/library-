@@ -2,9 +2,12 @@
 
 namespace Library\Users;
 
+include 'User.php';
 // Declaring a class 
 
-class Guest {
+use Library\Users\User;
+
+class Guest extends User {
 
 //      Creating properties within the class.            
     protected $first_name;
