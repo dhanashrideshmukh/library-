@@ -7,7 +7,7 @@ include 'C:\xampp\htdocs\Exercise20\Library\Interfaces\Bookable.php';
 
 use Library\Interfaces\Bookable;
 
-class Library_Manager extends Librarian {
+class Library_Manager extends Librarian implements Bookable{
 
 // First parameter is passed by reference as we want to make changes to the original array that is sent.
 // if this is not done then the changes don't apply to original array.    
@@ -20,6 +20,9 @@ public function view($list) {
         print_r($list);
     }
   
+public function viewMD(Bookable $details) {
+    return $details->asBookable($id, $password);
+}
 }
 
 

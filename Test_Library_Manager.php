@@ -27,6 +27,8 @@ $Library_Manager->DeleteData($array, $item);
 
 $Library_Manager->view($array);
 
+$Library_Manager->viewMD(new LogInDetails("A", "B"));
+
 
 
 

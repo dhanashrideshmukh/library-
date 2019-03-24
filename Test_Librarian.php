@@ -2,12 +2,13 @@
 
 
 include 'Library/Users/Librarian.php';
+include 'array.php';
 
 //include Library\Users\Library_Manager . php;
 use Library\Users\Guest;
 use Library\Users\Member;
 use Library\Users\Librarian;
-include 'array.php';
+
 
 $Librarian = new Librarian("000000", "(Librarian)", "5678", "L3arn", "Laura", "Lang");
 //      Setting a property/object 

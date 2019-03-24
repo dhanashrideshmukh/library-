@@ -25,9 +25,13 @@ echo $Member->Forgot_user_id()."\n\n"; //get_user_id
 
 echo $Member->Forgot_password()."\n\n";
 
+echo $Member->asReturnable()."\n\n";
+
 $due_date = "21-04-2019";
 $days = 5;
 echo $Member->Update_Due_Date($due_date, $days);
+
+
 
 
 
