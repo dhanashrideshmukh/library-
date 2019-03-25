@@ -4,9 +4,9 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<?php
-session_start();
-?>
+//<?php
+//session_start();
+//?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -21,7 +21,7 @@ session_start();
         
         <p>
             <?php
-//            echo $_SESSION['errorMessage'];
+            echo $_SESSION['errorMessage'];
             ?>
         </p>
         

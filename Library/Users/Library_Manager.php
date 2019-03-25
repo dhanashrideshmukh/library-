@@ -27,10 +27,11 @@ public function viewMD(Bookable $details) {
 public function asReturnable($email){
     foreach ($this->email as $login) {
             if (strpos($login, $email) !== false) {
-                echo "Your log in is: $email;
+                echo "Your log in is: $email";
             }
         }
 }
+
 }
 
 
