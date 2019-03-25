@@ -1,10 +1,8 @@
 <?php
 
 
-include 'Library/Users/Librarian.php';
-include 'array.php';
+include 'autoload.php';
 
-//include Library\Users\Library_Manager . php;
 use Library\Users\Guest;
 use Library\Users\Member;
 use Library\Users\Librarian;
