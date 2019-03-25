@@ -1,0 +1,110 @@
+/*
+*/
+/* 
+    Created on : 16-Feb-2019, 18:40:57
+    Author     : Edwards
+*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans'); 
+
+/*Background*/
+
+body {
+    background-image: url("1.png");
+    background-size: cover;
+}
+
+/*Navbar*/
+nav ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    background: white;     
+     
+}
+
+nav ul li{
+    display: inline-block;
+    font-size: 1.1em;
+    padding: 12px
+}
+nav a{
+    text-decoration: none;
+    color: black;
+    padding: 12px;
+        
+}
+nav a:hover{
+    background: #829399;/*cream */
+    color: white;/*pink */
+}
+
+/*Page Content*/
+#content {
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+ }
+ #content h1{
+     color: white;
+     font-size: 40px;
+     font-weight: bold;
+     margin-bottom: -70px;
+     font-family: 'Montserrat', sans-serif;
+ } 
+
+
+ p{
+    color: white;
+    font-size: 50px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+ }
+ 
+ h2{
+    color: white;
+    font-weight: bolder;
+    padding-top: 0px;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif; 
+ }
+
+  h1{
+    color: white;
+    font-weight: bolder;
+    padding-top: -50px;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif; 
+ }
+ /*Link button*/
+.button1 {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 12px;
+}
+
+.button:hover {
+  background-color: grey;
+}
+
+#login {
+    margin-top: 10%;
+border: black solid 3px;
+background-color: grey;
+width: 700px;
+padding-top: 30px;
+padding-bottom: 30px;
+}
+
+
+
+
+
+
+
+ 

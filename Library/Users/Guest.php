@@ -5,7 +5,7 @@ namespace Library\Users;
 include 'User.php';
 // Declaring a class 
 
-use Library\Users\User;
+//use Library\Users\User;
 
 class Guest extends User {
 
