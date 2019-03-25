@@ -1,9 +1,6 @@
 <?php
 
-include 'Library/Users/Guest.php';
-//include Library\Users\Member . php;
-//include Library\Users\Librarian . php;
-//include Library\Users\Library_Manager . php;
+include 'autoload.php';
 include 'array.php';
 
 use Library\Users\Guest;
