@@ -2,9 +2,6 @@
 
 namespace Library\Users;
 include 'Member.php';
-//include 'C:\xampp\htdocs\Exercise20\Library\Interfaces\Bookable.php';
-
-//use Library\Interfaces\Bookable;
 
 class Librarian extends Member //implements Bookable 
 {

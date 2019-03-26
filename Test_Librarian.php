@@ -6,7 +6,7 @@ include 'autoload.php';
 use Library\Users\Guest;
 use Library\Users\Member;
 use Library\Users\Librarian;
-include 'array.php';
+
 
 $Librarian = new Librarian("000000", "(Librarian)", "5678", "L3arn", "Laura", "Lang");
 //      Setting a property/object 

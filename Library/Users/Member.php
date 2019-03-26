@@ -4,11 +4,12 @@ namespace Library\Users;
 
 include 'Guest.php';
 include 'Library/Traits/Traits.php';
+include 'Library/Interfaces/Returnable.php';
 
 //use Library\Traits;
 
 
-class Member extends Guest {
+class Member extends Guest implements \Library\Interfaces\Returnable{
 
 //      Creating properties within the class.
     protected $user_id;
@@ -56,6 +57,7 @@ class Member extends Guest {
 //            return "Thank-you for renewing your book loan, please note your new return date is now: " . date("Y-m-d", $date);
 //        }
 //    }
-    
-
+        public function asReturnable() {
+            return $this->user_id;
+        }
 }
