@@ -1,7 +1,7 @@
 <?php
 
 
-include 'Library/Users/Library_Manager.php';
+include '\xampp\htdocs\Exercise20\library-\Library\Users\Library_Manager.php';
 include 'array.php';
 
 use Library\Users\Guest;
@@ -27,7 +27,7 @@ $Library_Manager->DeleteData($array, $item);
 
 $Library_Manager->view($array);
 
-$Library_Manager->viewMD(new LogInDetails("A", "B"));
+echo $Library_Manager->asReturnable()."\n\n";
 
 
 

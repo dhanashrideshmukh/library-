@@ -3,15 +3,15 @@
 namespace Library\Users;
 
 include 'Guest.php';
-include 'Library/Traits/Traits.php';
-include 'Library/Interfaces/Returnable.php';
+include '\xampp\htdocs\Exercise20\library-\Library\Traits\Traits.php';
+include_once '\xampp\htdocs\Exercise20\library-\Library\Interfaces\Returnable.php';
 
 //use Library\Traits;
 
 
 class Member extends Guest implements \Library\Interfaces\Returnable{
 
-//      Creating properties within the class.
+//Creating properties within the class.
     protected $user_id;
     protected $password;
 
