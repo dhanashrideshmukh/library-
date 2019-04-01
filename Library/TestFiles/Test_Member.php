@@ -1,16 +1,10 @@
 <?php
 
-
-include '\xampp\htdocs\Exercise20\library-\Library\Users\Member.php';
-
+include '../../autoload.php';
 include 'array.php';
-//include 'Library/Traits/Traits.php';
 
-//include Library\Users\Librarian . php;
-//include Library\Users\Library_Manager . php;
 use Library\Users\Guest;
 use Library\Users\Member;
-//use Library\Traits\Traits;
 
 $Member = new Member("3333", "C00k5", "Mary", "Magoo");
 //      Setting a property/object 
