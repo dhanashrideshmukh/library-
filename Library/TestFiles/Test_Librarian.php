@@ -1,7 +1,10 @@
 <?php
 
 
-include 'autoload.php';
+//include 'autoload.php';
+include 'array.php';
+include '\xampp\htdocs\Exercise20\library-\Library\Users\Librarian.php';
+
 
 use Library\Users\Guest;
 use Library\Users\Member;
