@@ -1,6 +1,7 @@
 <?php
 
 namespace Library\Users;
+include_once '../../autoload.php';
 
 //use Library\Traits;
 

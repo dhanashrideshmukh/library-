@@ -1,8 +1,7 @@
 <?php
 
 namespace Library\Users;
-
-include 'User.php';
+include_once '../../autoload.php';
 // Declaring a class 
 
 //use Library\Users\User;

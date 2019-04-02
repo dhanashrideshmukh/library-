@@ -1,7 +1,7 @@
 <?php
 
 namespace Library\Users;
-include 'Member.php';
+include_once '../../autoload.php';
 
 class Librarian extends Member //implements Bookable 
 {
