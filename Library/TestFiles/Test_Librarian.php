@@ -32,18 +32,9 @@ echo $Librarian->Forgot_user_id() . "\n";
 
 echo $Librarian->Position() . "\n";
 
-//write(new Librarian("hi"));
-
-//$due_date=13-03-2019;
-//$days=5;
-//echo $Librarian->Update_Due_Date($due_date, $days);
-
 $Librarian->view($array);
 
-//$i = "Smith";
-//$Librarian->search($array,$i);
 
-//$Librarian->Search("I See You");
 
 
 
