@@ -21,7 +21,7 @@ echo $Library_Manager->Forgot_user_id() . "\n";
 
 echo $Library_Manager->Position() . "\n";
 
-$item = "ABC";
+$item = "Honey Bell";
 $Library_Manager->DeleteData($array, $item);
 
 $Library_Manager->view($array);
