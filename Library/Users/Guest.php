@@ -2,9 +2,6 @@
 
 namespace Library\Users;
 include_once '../../autoload.php';
-// Declaring a class 
-
-//use Library\Users\User;
 
 class Guest extends User {
 
@@ -13,7 +10,7 @@ class Guest extends User {
     protected $last_name;
 
 //      Creating methods  
-//      add method for Guest to search allowed tables
+
 
     public function __construct($first_name, $last_name) {
         $this->first_name = $first_name;
@@ -34,7 +31,7 @@ class Guest extends User {
             return false;
         }
     }
-
+//      add method for Guest to search allowed tables
     public function Search($bookname) {
         foreach ($this->BookList as $bname) {
             if (strpos($bname, $bookname) !== false) {

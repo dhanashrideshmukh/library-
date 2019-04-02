@@ -3,13 +3,8 @@
 namespace Library\Users;
 include_once '../../autoload.php';
 
-
-//use Library\Interfaces\Returnable;
-
-class Library_Manager extends Librarian implements \Library\Interfaces\Returnable{
-
-// First parameter is passed by reference as we want to make changes to the original array that is sent.
-// if this is not done then the changes don't apply to original array.    
+class Library_Manager extends Librarian {
+    
 public function DeleteData ($list,$item) {
     unset($list[$item]);
     print_r($list);
@@ -18,24 +13,15 @@ public function DeleteData ($list,$item) {
 public function view($list) {
         print_r($list);
     }
-  
-public function viewMD(Bookable $details) {
-    return $details->asBookable($id, $password);
-}
 
-public function asReturnable(){
-    return "Hello";
-//    foreach ($this->email as $login) {
-//            if (strpos($login, $email) !== false) {
-////                echo "Your log in is: $email";
+public function asReturnable($email){
+    
+//    foreach ($this->email as $user_id) {
+//            if (strpos($user_id, $email) !== false) {
+//                echo "Your log in is: $user_id";
+//            } else {
+                echo "$email";
 //            }
-        }
+//        }
 }
-
-
-
-
-
-
-
-
+}

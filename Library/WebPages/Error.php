@@ -1,7 +1,4 @@
 
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -21,9 +18,7 @@ and open the template in the editor.
         </div>
         
         <p>
-            <?php
-//            echo $_SESSION['errorMessage'];
-            ?>
+           
         </p>
         
         <div style="text-align: center">
@@ -31,4 +26,4 @@ and open the template in the editor.
         </div>
     </body>
 </html>
->>>>>>> 514a6e2ae3a66b6ec2ada475d5911b5243ade0ab
+

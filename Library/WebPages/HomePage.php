@@ -30,10 +30,7 @@
                           <button class="Button button1" type="button"><a href="Error.php">Find your favourite today...</a></button>
                           
         </div>
-        <?php
-        // put your code here
-        ?>
+        
     </body>
 </html>
 
->>>>>>> 514a6e2ae3a66b6ec2ada475d5911b5243ade0ab

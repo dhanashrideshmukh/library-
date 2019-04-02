@@ -1,5 +1,5 @@
 <?php
-
+//Traits can be used in any class by using the namespace and then calling the method
 namespace Library\Traits;
 
 trait dateable {
