@@ -1,7 +1,6 @@
 <?php
 
-include 'autoload.php';
-//include '\xampp\htdocs\Exercise20\library-\Library\Users\Guest.php';
+include '../../autoload.php';
 include 'array.php';
 
 

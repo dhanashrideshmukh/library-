@@ -9,8 +9,14 @@ spl_autoload_register(function ($class_name) {
     
     if (file_exists($file_path)) {
         include $file_path;
+    } else {
+        $file_path = "../../$file_path";
+        if (file_exists($file_path)) {
+            include $file_path;
+        } else {
+            echo "$class_name not found";
+        }
     }
-    else echo "$class_name not found";
 });
 
 

@@ -2,14 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/library-/Library/Users/Member.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/library-/Test_Member.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/library-/Test_Guest.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/library-/Test_Librarian.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/library-/autoload.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/library-/Library/Users/Guest.php</file>
-            <file>file:/Applications/XAMPP/xamppfiles/htdocs/library-/Library/Users/Librarian.php</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
