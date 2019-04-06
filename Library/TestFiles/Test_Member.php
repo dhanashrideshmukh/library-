@@ -20,7 +20,7 @@ echo $Member->Forgot_user_id()."\n\n"; //get_user_id
 
 echo $Member->Forgot_password()."\n\n";
 
-echo $Member->asReturnable()."\n\n";
+echo $Member->asReturnable("anna.smidt@gmail.com")."\n\n";
 
 $due_date = "21-04-2019";
 $days = 5;

@@ -1,9 +1,9 @@
 <?php
 
 namespace Library\Users;
-include 'Member.php';
+include_once '../../autoload.php';
 
-class Librarian extends Member //implements Bookable 
+class Librarian extends Member  
 {
     protected $emp_id;
     protected $position;
@@ -20,7 +20,7 @@ class Librarian extends Member //implements Bookable
     }
 
     public function view($list) {
-        return $list;
+       print_r ($list);
     }
 
     public function updateTitle(&$array, $oldTitle, $newTitle) {
@@ -48,8 +48,5 @@ public function insertAll(&$array, $author, $title) {
         $array[$author] = $title;
     }
     
-//public function write(Bookable $a) {
-//    echo $a->asBookable();
-//}
 
 }

@@ -26,7 +26,7 @@ $Library_Manager->DeleteData($array, $item);
 
 $Library_Manager->view($array);
 
-echo $Library_Manager->asReturnable()."\n\n";
+echo $Library_Manager->asReturnable("anna.smidt@gmail.com")."\n\n";
 
 
 

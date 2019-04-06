@@ -8,9 +8,9 @@ spl_autoload_register(function ($class_name) {
     // $file_path = Library/Users/Guest.php
     
     if (file_exists($file_path)) {
-        include $file_path;
+        include $file_path;//if file with autoload is run from the root directory (Source Files)
     } else {
-        $file_path = "../../$file_path";
+        $file_path = "../../$file_path";//if file with autoload is run from Test Files directory
         if (file_exists($file_path)) {
             include $file_path;
         } else {
