@@ -30,7 +30,9 @@ class Guest {
             $stmt->execute($_GET);
             $book = $stmt->setFetchMode(PDO::FETCH_ASSOC);
             while ($book = $stmt->fetch()) {
+                echo '<div class="row justify-content-center align-items-center">';
                 echo '<pre>'; print_r($book); echo '</pre>';
+                echo '</div>';
             }
         } catch (PDOException $e) {
             echo $e->getMessage();

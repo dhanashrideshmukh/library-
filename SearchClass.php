@@ -22,9 +22,13 @@ public function search($pdo, $bookname) {
    $result = $stmt->fetchAll();
    if ($result == null) {
 //     echo '<pre>'; print_r($result); echo '</pre>';  
+       echo '<div class="row justify-content-center align-items-center">';
        echo "No results for $bookname.";
+       echo '</div>';
    } else {
+       echo '<div class="row justify-content-center align-items-center">';
        echo '<pre>'; print_r($result); echo '</pre>';
+       echo '</div>';
    }
     
 } catch (PDOException $e)

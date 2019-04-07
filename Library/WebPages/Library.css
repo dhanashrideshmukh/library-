@@ -101,9 +101,59 @@ padding-top: 30px;
 padding-bottom: 30px;
 }
 
+#add_author {
+  margin-top: 10%;
+border: black solid 3px;
+background-color: grey;
+width: 700px;
+padding-top: 30px;
+padding-bottom: 30px;  
+}
 
+.author_input {
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
+#view_loaned_books {
+margin-top: 10%;
+border: black solid 3px;
+background-color: grey;
+width: 700px;
+padding-top: 30px;
+padding-bottom: 30px; 
+}
 
+#update_loaned_books {
+    margin-top: 10%;
+border: black solid 3px;
+background-color: grey;
+width: 700px;
+padding-top: 30px;
+padding-bottom: 30px; 
+}
+
+.parent-container {
+    display: flex;
+}
+
+#search {
+        margin-top: 10%;
+border: black solid 3px;
+background-color: grey;
+width: 700px;
+padding-top: 30px;
+padding-bottom: 30px; 
+}
+
+#view {
+            margin-top: 10%;
+border: black solid 3px;
+background-color: grey;
+width: 700px;
+padding-top: 30px;
+padding-bottom: 30px; 
+}
 
 
 
