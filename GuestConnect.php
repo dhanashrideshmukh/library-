@@ -4,7 +4,15 @@ $dsn = "mysql:host=localhost;dbname=library_v8";
 $user = "root";
 $pass = "";
 $opt = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
+
+try {
 $pdo = new PDO($dsn, $user, $pass, $opt);
+} catch (PDOException $e) {
+                echo $e->getMessage();
+//            $error = $e->errorInfo();
+//                include ("C:\xampp\htdocs\Exercise20\Library\WebPages\Error.php");
+            die("Connection Error");
+}
 
 class Guest {
 
@@ -12,17 +20,17 @@ class Guest {
 
     public function __construct(PDO $pdo) {
         $this->conn = $pdo;
-    }
-
-    public function view($conn) {
-        $stmt = $conn->prepare("call LIST()");
+    
+//    }
+//    public function view($conn) {
+        $stmt = $pdo->prepare("call LIST()");
 
         try {
 
             $stmt->execute($_GET);
             $book = $stmt->setFetchMode(PDO::FETCH_ASSOC);
             while ($book = $stmt->fetch()) {
-                print_r($book);
+                echo '<pre>'; print_r($book); echo '</pre>';
             }
         } catch (PDOException $e) {
             echo $e->getMessage();
@@ -34,7 +42,7 @@ class Guest {
 }
 
 $guest = new Guest($pdo);
-$guest->view($pdo);
+//$guest->view($pdo);
 
 
 
