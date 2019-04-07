@@ -43,9 +43,13 @@ and open the template in the editor.
             include '../../autoload.php'; 
             use Library\Users\Member;
             if (!empty($_POST)) {
+                if ($_POST["username"] == "Librarian") {
+                    echo "<br><h4>Click <a href='LibrarianAdmin.php'>here</a> to view your admin page.</h4>";
+                } else {
                 $user = $_POST["username"];
                 $user1 = new Member($user, "", $user, "");
-                echo "<br><h4>Click <a href='#'>here</a> to search for a book</h4>";
+                echo "<br><h4>Click <a href='MemberBookLoan.php'>here</a> to view your loan history.</h4>";
+                }
             } else {
                 echo "<h4>Forgot your username or password? <a href='#'>Click here</a></h4>";
             }

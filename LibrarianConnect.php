@@ -1,6 +1,6 @@
 <?php
 
-$dsn = "mysql:host=localhost;dbname=libraryv6";
+$dsn = "mysql:host=localhost;dbname=library_v8";
 $user = "root";
 $pass = "";
 $opt = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
