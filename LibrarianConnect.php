@@ -15,7 +15,7 @@ class Librarian {
     }
 
     public function insert($pdo, $forename, $surname) {
-    $insert = $pdo->prepare("INSERT INTO author (forename, surname) VALUES (:forename, :surname)");
+        $insert = $pdo->prepare("INSERT INTO author (forename, surname) VALUES (:forename, :surname)");
         try {
             $insert->execute(["forename" => $forename, "surname" => $surname]);
         } catch (PDOException $e) {
@@ -24,7 +24,8 @@ class Librarian {
             die("Insert error");
         }
     }
-    }
+
+}
 
 $librarian = new Librarian($pdo);
 $librarian->insert($pdo, "Mac", "The Cat");
