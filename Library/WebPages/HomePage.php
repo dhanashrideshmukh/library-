@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <link href="Library.css" rel="stylesheet" type="text/css"/>
-        <title></title>
+        <title>London Library</title>
     </head>
     <body>
         <nav>
