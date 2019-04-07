@@ -27,7 +27,7 @@
                           <br>
                           <br>
                           
-                          <button class="Button button1" type="button"><a href="Error.php">Find your favourite today...</a></button>
+                          <button class="Button button1" type="button"><a href="DBookSearch.php">Find your favourite today...</a></button>
                           
         </div>
         
