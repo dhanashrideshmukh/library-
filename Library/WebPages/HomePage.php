@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <link href="Library.css" rel="stylesheet" type="text/css"/>
-        <title></title>
+        <title>London Library</title>
     </head>
     <body>
         <nav>
@@ -12,6 +12,7 @@
             <ul>
                 <li><a href="HomePage.php">Home</a></li>
                 <li><a href="Error.php">About Us</a></li>
+                <li><a href="View.php">Our Collection</a></li>
                 <li><a href="LoginPage.php">Login</a></li>
                 <li><a href="">Register</a></li>
             </ul>
@@ -27,7 +28,10 @@
                           <br>
                           <br>
                           
-                          <button class="Button button1" type="button"><a href="DBookSearch.php">Find your favourite today...</a></button>
+
+
+                          <button class="Button button1" type="button"><a href="Search.php">Find your favourite today...</a></button>
+
                           
         </div>
         

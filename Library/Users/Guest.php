@@ -10,8 +10,6 @@ class Guest extends User {
     protected $last_name;
 
 //      Creating methods  
-
-
     public function __construct($first_name, $last_name) {
         $this->first_name = $first_name;
         $this->last_name = $last_name;

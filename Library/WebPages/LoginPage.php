@@ -9,19 +9,20 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="Library.css" rel="stylesheet" type="text/css"/>
-        <title></title>
+        <title>Login</title>
     </head>
     <body>
-        <nav>
-
+<nav>
+            
             <ul>
                 <li><a href="HomePage.php">Home</a></li>
                 <li><a href="Error.php">About Us</a></li>
+                <li><a href="View.php">Our Collection</a></li>
                 <li><a href="LoginPage.php">Login</a></li>
                 <li><a href="">Register</a></li>
             </ul>
-
-        </nav> 
+            
+        </nav>       
 
         <div class="container" id="login">
 
@@ -43,9 +44,13 @@ and open the template in the editor.
             include '../../autoload.php'; 
             use Library\Users\Member;
             if (!empty($_POST)) {
+                if ($_POST["username"] == "Librarian") {
+                    echo "<br><h4>Click <a href='LibrarianAdmin.php'>here</a> to view your admin page.</h4>";
+                } else {
                 $user = $_POST["username"];
                 $user1 = new Member($user, "", $user, "");
-                echo "<br><h4>Click <a href='#'>here</a> to search for a book</h4>";
+                echo "<br><h4>Click <a href='MemberBookLoan.php'>here</a> to view your loan history.</h4>";
+                }
             } else {
                 echo "<h4>Forgot your username or password? <a href='#'>Click here</a></h4>";
             }

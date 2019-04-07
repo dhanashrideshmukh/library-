@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -9,11 +8,11 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <link href="Library.css" rel="stylesheet" type="text/css"/>
-        <title>Error</title>
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>Our Collection</title>
     </head>
     <body>
         <nav>
-            
             <ul>
                 <li><a href="HomePage.php">Home</a></li>
                 <li><a href="Error.php">About Us</a></li>
@@ -21,21 +20,16 @@ and open the template in the editor.
                 <li><a href="LoginPage.php">Login</a></li>
                 <li><a href="">Register</a></li>
             </ul>
-            
-        </nav>
+        </nav>       
         
-        <div style="text-align: center">
-            <h2>Oops, something has gone wrong!</h2> 
-            <h2>If at first you don't succeed, try, try...</h2>
-        </div>
-        
-        <p>
-           
-        </p>
-        
-        <div style="text-align: center">
-           <button type="button" onclick="window.location.href = 'HomePage.php';">...again?</button>
+        <div class="container" id="view">
+            <div class="row justify-content-center align-items-center">
+                Our Collection:
+            </div>
+        <?php
+include("..\..\GuestConnect.php");
+$guest = new Guest($pdo);
+        ?>
         </div>
     </body>
 </html>
-
