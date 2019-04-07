@@ -19,17 +19,17 @@ class Member extends PDO {
         $this->second_name = $second_name;
         
 
-//    }
-//
-//    public function view($conn, $first_name, $second_name) {
+    }
+
+    public function view($conn, $first_name, $second_name) {
         
-        $stmt = $pdo->prepare("select ID from member where forename = '$first_name' && surname = '$second_name'");
+        $stmt = $conn->prepare("select ID from member where forename = '$first_name' && surname = '$second_name'");
         $stmt->execute($_GET);
         $memberKey = $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $memberKey = $stmt->fetch();
         $memberId = $memberKey['ID'];
         
-        $stmt = $pdo->prepare("SELECT title, book_loan.Date_Loaned, book_loan.Date_Returned, book_loan.Due_Date "
+        $stmt = $conn->prepare("SELECT title, book_loan.Date_Loaned, book_loan.Date_Returned, book_loan.Due_Date "
                 . "FROM book INNER JOIN book_loan ON book.ID = book_loan.book_id WHERE member_id = $memberId;");
 
         try {
@@ -37,7 +37,7 @@ class Member extends PDO {
             $stmt->execute($_GET);
             $book = $stmt->setFetchMode(PDO::FETCH_ASSOC);
             while ($book = $stmt->fetch()) {
-                echo '<pre>'; print_r($book);  echo '</pre>';
+                echo '<pre>'; print_r($book); echo '</pre>';
             }
         } catch (PDOException $e) {
             echo $e->getMessage();
@@ -74,7 +74,7 @@ class Member extends PDO {
         }
 
         $update = $conn->prepare("UPDATE book_loan SET due_date = '$date' WHERE book_id = $ID");
-
+echo "Your due date has been extended to $date.";
         try {
             $update->execute();
         } catch (PDOException $e) {
