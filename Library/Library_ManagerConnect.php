@@ -1,4 +1,5 @@
 <?php
+
 $dsn = "mysql:host=localhost;dbname=library_v9";
 $user = "root";
 $pass = "";
@@ -9,12 +10,12 @@ class Library_Manager {
     public function __construct(PDO $pdo) {
         $this->conn = $pdo;
     }
-    public function DeleteData($pdo,$title) {
+    public function DeleteData($conn,$title) {
         
-        $stmt = $pdo->prepare("select ID from book where title = ?");
+        $stmt = $conn->prepare("select ID from book where title = ?");
         try {
             $stmt->execute([$title]);
-            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $idKey = $stmt->setFetchMode(PDO::FETCH_ASSOC);
             $idKey = $stmt->fetch();
             $ID = $idKey['ID'];
         } catch (PDOException $e) {
@@ -23,11 +24,11 @@ class Library_Manager {
             die("ID return error");
         }
         //First delete the link from Author_book intermediary table if exists
-        $stmt = $pdo->prepare("DELETE FROM author_book_intermediary WHERE book_id = ?");
+        $stmt = $conn->prepare("DELETE FROM author_book_intermediary WHERE book_id = ?");
         try {
             $stmt->execute([$ID]);
             
-           // echo "\n"."Rows Deleted from author_book_intermediary ";
+            echo "\n"."Rows Deleted from author_book_intermediary ";
             
         } catch (PDOException $e) {
             echo $e->getMessage();
@@ -36,20 +37,20 @@ class Library_Manager {
         }
         
         // Delete from stock
-         $stmt = $pdo->prepare("DELETE FROM stock WHERE book_id = ?");
+         $stmt = $conn->prepare("DELETE FROM stock WHERE book_id = ?");
         try {
             $stmt->execute([$ID]);
-          //  echo "\n"."Rows Deleted from stock ";
+            echo "\n"."Rows Deleted from stock ";
             
         } catch (PDOException $e) {
             echo $e->getMessage();
             $error = $e->errorInfo();
             die();
         }
-        $stmt = $pdo->prepare("DELETE FROM BOOK WHERE ID = ?");
+        $stmt = $conn->prepare("DELETE FROM BOOK WHERE ID = ?");
         try {
             $stmt->execute([$ID]);
-          //  echo "\n"."Rows Deleted from Book ";
+            echo "\n"."Rows Deleted from Book ";
         } catch (PDOException $e) {
             echo $e->getMessage();
             $error = $e->errorInfo();
@@ -59,3 +60,5 @@ class Library_Manager {
 }
 $librarymanager = new Library_Manager($pdo);
 $librarymanager->DeleteData($pdo,"Super cats");
+
+
