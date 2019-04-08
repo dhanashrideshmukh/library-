@@ -12,6 +12,11 @@ and open the template in the editor.
         <title>Member</title>
     </head>
     <body>
+        <?php 
+        session_start();
+        include("..\..\MemberConnect.php");
+        
+        ?>
         <nav>
 
             <ul>
@@ -50,13 +55,14 @@ and open the template in the editor.
                         if (isset($_POST['submit'])) {
                             $first_name = $_POST['first_name'];
                             $second_name = $_POST['surname'];
+                            $_SESSION['first_name'] = $first_name;
+                            $_SESSION['surname'] = $second_name;
                             echo "Books loaned by: $first_name" . " $second_name";
                         }
                         ?>
 
                         <?php
                         if (isset($_POST['submit'])) {
-                            include("..\..\MemberConnect.php");
                             $member = new Member($pdo, $first_name, $second_name);
                             $member->view($pdo, $first_name, $second_name);
                         }
@@ -77,7 +83,7 @@ and open the template in the editor.
                             </div>
 
                             <div class="row justify-content-center align-items-center">
-                                Date: <input type = "text" placeholder="YYYY-MM-DD" name = "due_date" />  
+                                Date: <input type = "text" autofocus pattern=([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])) title="Date must be YYYY-MM-DD" placeholder="YYYY-MM-DD" name = "due_date" />  
                             </div>
 
                             <div class="row justify-content-center align-items-center">
@@ -86,9 +92,17 @@ and open the template in the editor.
                         </form>
 
                         <?php
+                       
                         if (isset($_POST['update'])) {
                             $book_title = $_POST['book_title'];
                             $due_date = $_POST['due_date'];
+                            
+                            $first_name = $_SESSION['first_name'];
+                            $second_name = $_SESSION['surname'];
+                            
+                             $member = new Member($pdo, $first_name, $second_name);
+                            $member->update($pdo, $book_title, $due_date);
+                            
 //                            $temp_due_date = "$temp_due_date";
 //                            $temp_due_date = preg_split('-[/]-', $temp_due_date);
 //                            $due_date = "$temp_due_date[2]"."-"."$temp_due_date[1]"."-"."$temp_due_date[0]";
@@ -97,13 +111,6 @@ and open the template in the editor.
                         }
                         ?>
 
-                        <?php
-                        if (isset($_POST['update'])) {
-                            include("..\..\MemberConnect.php");
-//                            $member = new Member($pdo, $first_name, $second_name);
-                            $member->update($pdo, $book_title, $due_date);
-                        }
-                        ?>
                     </div>
                 </div>
             </div>
