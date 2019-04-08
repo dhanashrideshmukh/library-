@@ -155,6 +155,13 @@ padding-top: 30px;
 padding-bottom: 30px; 
 }
 
-
+#Delete_Data {
+  margin-top: 10%;
+border: black solid 3px;
+background-color: grey;
+width: 700px;
+padding-top: 30px;
+padding-bottom: 30px;  
+}
 
  

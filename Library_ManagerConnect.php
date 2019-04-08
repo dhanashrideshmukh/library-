@@ -9,12 +9,12 @@ class Library_Manager {
     public function __construct(PDO $pdo) {
         $this->conn = $pdo;
     }
-    public function DeleteData($conn,$title) {
+    public function DeleteData($pdo,$title) {
         
-        $stmt = $conn->prepare("select ID from book where title = ?");
+        $stmt = $pdo->prepare("select ID from book where title = ?");
         try {
             $stmt->execute([$title]);
-            $idKey = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
             $idKey = $stmt->fetch();
             $ID = $idKey['ID'];
         } catch (PDOException $e) {
@@ -23,11 +23,11 @@ class Library_Manager {
             die("ID return error");
         }
         //First delete the link from Author_book intermediary table if exists
-        $stmt = $conn->prepare("DELETE FROM author_book_intermediary WHERE book_id = ?");
+        $stmt = $pdo->prepare("DELETE FROM author_book_intermediary WHERE book_id = ?");
         try {
             $stmt->execute([$ID]);
             
-            echo "\n"."Rows Deleted from author_book_intermediary ";
+           // echo "\n"."Rows Deleted from author_book_intermediary ";
             
         } catch (PDOException $e) {
             echo $e->getMessage();
@@ -36,20 +36,20 @@ class Library_Manager {
         }
         
         // Delete from stock
-         $stmt = $conn->prepare("DELETE FROM stock WHERE book_id = ?");
+         $stmt = $pdo->prepare("DELETE FROM stock WHERE book_id = ?");
         try {
             $stmt->execute([$ID]);
-            echo "\n"."Rows Deleted from stock ";
+          //  echo "\n"."Rows Deleted from stock ";
             
         } catch (PDOException $e) {
             echo $e->getMessage();
             $error = $e->errorInfo();
             die();
         }
-        $stmt = $conn->prepare("DELETE FROM BOOK WHERE ID = ?");
+        $stmt = $pdo->prepare("DELETE FROM BOOK WHERE ID = ?");
         try {
             $stmt->execute([$ID]);
-            echo "\n"."Rows Deleted from Book ";
+          //  echo "\n"."Rows Deleted from Book ";
         } catch (PDOException $e) {
             echo $e->getMessage();
             $error = $e->errorInfo();
