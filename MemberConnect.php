@@ -79,7 +79,7 @@ class Member extends PDO {
             }
         } catch (PDOException $e) {
             echo $e->getMessage();
-            $error = $e->errorInfo();
+//            $error = $e->errorInfo();
             die("Member Due Date Error");
         }
 
@@ -92,12 +92,15 @@ class Member extends PDO {
             $update->execute();
         } catch (PDOException $e) {
             echo $e->getMessage();
-            $error = $e->errorInfo();
+//            $error = $e->errorInfo();
             die("Member Update Error");
         }
     }
 
 }
+
+//$member = new Member($pdo, $first_name, $second_name);
+//$member->view($pdo, $first_name, $second_name);
 
 //$member = new Member($pdo, "Jenna", "Smith");
 

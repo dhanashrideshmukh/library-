@@ -1,5 +1,5 @@
 <?php
-$dsn = "mysql:host=localhost;dbname=library_v8";
+$dsn = "mysql:host=localhost;dbname=libraryv6";
 $user = "root";
 $pass = "";
 $opt = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
@@ -60,5 +60,5 @@ class Library_Manager extends PDO {
         }
     }
 }
-$librarymanager = new Library_Manager($pdo);
-$librarymanager->DeleteData($pdo,"Super cats");
+//$librarymanager = new Library_Manager($pdo);
+//$librarymanager->DeleteData($pdo,"Super cats");
