@@ -1,10 +1,4 @@
-/*
-*/
-/* 
-    Created on : 16-Feb-2019, 18:40:57
-    Author     : Edwards
-*/
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans'); 
+
 
 /*Background*/
 
@@ -155,6 +149,13 @@ padding-top: 30px;
 padding-bottom: 30px; 
 }
 
-
+#Delete_Data {
+  margin-top: 10%;
+border: black solid 3px;
+background-color: grey;
+width: 700px;
+padding-top: 30px;
+padding-bottom: 30px;  
+}
 
  
