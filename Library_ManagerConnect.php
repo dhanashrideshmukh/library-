@@ -1,11 +1,13 @@
 <?php
-$dsn = "mysql:host=localhost;dbname=library_v9";
+$dsn = "mysql:host=localhost;dbname=library_v8";
 $user = "root";
 $pass = "";
 $opt = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
 $pdo = new PDO($dsn, $user, $pass, $opt);
-class Library_Manager {
+
+class Library_Manager extends PDO {
     private $conn;
+    
     public function __construct(PDO $pdo) {
         $this->conn = $pdo;
     }
@@ -46,13 +48,14 @@ class Library_Manager {
             $error = $e->errorInfo();
             die();
         }
-        $stmt = $pdo->prepare("DELETE FROM BOOK WHERE ID = ?");
+        $stmt = $pdo->prepare("DELETE FROM book WHERE ID = ?");
         try {
             $stmt->execute([$ID]);
           //  echo "\n"."Rows Deleted from Book ";
         } catch (PDOException $e) {
             echo $e->getMessage();
-            $error = $e->errorInfo();
+            $error = $e->errorInfo($opt);
+//            print_r($error);
             die();
         }
     }

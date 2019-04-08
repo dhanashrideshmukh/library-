@@ -5,23 +5,23 @@ $user = "root";
 $pass = "";
 $opt = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION];
 
-try {
 $pdo = new PDO($dsn, $user, $pass, $opt);
-} catch (PDOException $e) {
-                echo $e->getMessage();
-//            $error = $e->errorInfo();
-//                include ("C:\xampp\htdocs\Exercise20\Library\WebPages\Error.php");
-            die("Connection Error");
-}
+
 
 class Guest {
 
     private $conn;
 
-    public function __construct(PDO $pdo) {
-        $this->conn = $pdo;
     
-//    }
+    public function __construct(PDO $pdo) {
+      try {
+        $this->conn = $pdo;
+    } catch (PDOException $e) {
+                echo $e->getMessage();
+            die("Connection Error");
+}
+      
+
 //    public function view($conn) {
         $stmt = $pdo->prepare("call LIST()");
 
